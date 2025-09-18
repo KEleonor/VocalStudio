@@ -1,7 +1,728 @@
 <!DOCTYPE html>
-html lang="fr">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<métal name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eleo Vocal Studio-Artiste Lyrique et Pédagogue</title>
-<link rel="stylesheet" href= https://cdnjs.cloudflare.com/ajax
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleo Vocal Studio - Artiste Lyrique et Pédagogue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #8e44ad;   /* Violet profond */
+            --secondary-color: #d64c78; /* Rose vibrante */
+            --accent-color: #27ae60;    /* Vert nature */
+            --gold-color: #f39c12;      /* Or pour le classique */
+            --light-color: #f9f7fc;     /* Fond très clair */
+            --dark-color: #2c3e50;      /* Texte foncé */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* En-tête */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        
+        .studio-name {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: var(--gold-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .specialty {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            margin: 10px 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .specialty.classique {
+            background-color: var(--gold-color);
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        nav a:hover {
+            color: white;
+            background-color: var(--primary-color);
+        }
+        
+        /* Sections */
+        .section {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent-color);
+            text-align: center;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        /* Présentation */
+        .presentation {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .photo-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .presentation-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        /* Vidéos */
+        .videos-section {
+            text-align: center;
+        }
+        
+        .video-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .video-category-btn {
+            background-color: var(--light-color);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            margin: 0 10px 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .video-category-btn.active, .video-category-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.1);
+        }
+        
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover .play-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .video-description {
+            color: var(--dark-color);
+            font-size: 0.9rem;
+        }
+        
+        /* Modal vidéo */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Activités */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--accent-color);
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .activity-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-info {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            border-radius: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Pied de page */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 30px 30px 0 0;
+            margin-top: 60px;
+        }
+        
+        .social-links {
+            margin: 25px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            line-height: 60px;
+            margin: 0 12px;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-8px);
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .studio-name {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .modal-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-music"></i>
+            </div>
+            <h1>Eleo</h1>
+            <span class="studio-name">Vocal Studio</span>
+            <p class="tagline">Artiste Lyrique et Pédagogue</p>
+            <div class="specialty">Chant Pop et Lyrique</div>
+            <div class="specialty classique">Formation Classique</div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#videos">Vidéos</a></li>
+                <li><a href="#studio">Le Studio</a></li>
+                <li><a href="#activites">Activités</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="presentation" class="section">
+            <h2>Présentation</h2>
+            <div class="presentation">
+                <div class="photo-container">
+                    <img src="https://placehold.co/600x800/df9fbf/ffffff?text=Eleo" alt="Eleo - Artiste Lyrique et Pédagogue">
+                </div>
+                <div class="presentation-text">
+                    <p>Je suis Eleo, artiste lyrique et pédagogue passionnée par la transmission et l'expression vocale. Mon parcours unique allie une formation classique exigeante et une ouverture aux répertoires contemporains, me permettant d'accompagner chaque voix dans son authenticité.</p>
+                    <p>Issue d'une famille d'artistes, j'ai baigné dans l'univers musical depuis mon enfance. Ma double casquette d'artiste interprète et de pédagogue me permet d'aborder l'enseignement avec une sensibilité particulière, alliant rigueur technique et expressivité artistique.</p>
+                    <p>Je considère la voix comme un instrument d'expression unique, et mon approche pédagogique vise à révéler le potentiel de chacun dans le respect de sa singularité.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="videos" class="section videos-section">
+            <h2>Vidéos</h2>
+            <p>Découvrez mes performances en concert et le déroulement de mes ateliers à travers ces vidéos.</p>
+            
+            <div class="video-categories">
+                <button class="video-category-btn active" data-category="all">Toutes les vidéos</button>
+                <button class="video-category-btn" data-category="concerts">Concerts</button>
+                <button class="video-category-btn" data-category="ateliers">Ateliers</button>
+                <button class="video-category-btn" data-category="temoignages">Témoignages</button>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card" data-category="concerts">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Concert+Lyrique" alt="Concert de musique lyrique">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Concert de musique lyrique - Opéra</div>
+                        <div class="video-description">Extrait d'un concert avec un ensemble vocal de haut niveau. Répertoire classique.</div>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-category="ateliers">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/d64c78/ffffff?text=Atelier+Vocale" alt="Atelier de pratique vocale">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Atelier de technique vocale</div>
+                        <div class="video-description">Session de travail sur la respiration et le placement vocal en groupe.</div>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-category="concerts">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/27ae60/ffffff?text=Concert+Pop" alt="Concert de musique pop">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Concert pop - Créations originales</div>
+                        <div class="video-description">Performance mettant en avant des compositions originales et des reprises arrangées.</div>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-category="temoignages">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/f39c12/ffffff?text=Témoignages" alt="Témoignages d'élèves">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Témoignages d'élèves</div>
+                        <div class="video-description">Retours d'expérience sur les cours et ateliers suivis au studio.</div>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-category="ateliers">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Atelier+Concert" alt="Atelier-Concert">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Préparation d'atelier-concert</div>
+                        <div class="video-description">Travail sur l'interprétation et la présence scénique en vue d'une représentation.</div>
+                    </div>
+                </div>
+                
+                <div class="video-card" data-category="concerts">
+                    <div class="video-thumbnail">
+                        <img src="https://placehold.co/600x400/d64c78/ffffff?text=Récital" alt="Récital en solo">
+                        <div class="play-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title">Récital en solo - Œuvres classiques</div>
+                        <div class="video-description">Extrait d'un récital mettant en avant des œuvres du répertoire lyrique.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="video-modal" class="video-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="video-container">
+                    <iframe id="modal-video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <section id="studio" class="section">
+            <h2>Eleo Vocal Studio</h2>
+            
+            <div class="studio-presentation">
+                <h3>Un espace dédié à la voix sous toutes ses formes</h3>
+                <p>Eleo Vocal Studio est bien plus qu'un simple lieu d'enseignement : c'est un espace de découverte, d'expérimentation et de développement vocal où chaque élève peut explorer sa voix en confiance.</p>
+            </div>
+        </section>
+        
+        <section id="activites" class="section">
+            <h2>Activités du Studio</h2>
+            <p>Eleo Vocal Studio propose différentes formes d'accompagnement vocal adaptées aux besoins et aspirations de chacun.</p>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Cours Individuels</h3>
+                    <p>Accompagnement personnalisé adapté à votre voix, vos objectifs et votre parcours. Travail technique et artistique sur mesure.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Ateliers Collectifs</h3>
+                    <p>Pratique vocale en groupe pour explorer différentes techniques et répertoires. Dynamique de groupe bienveillante et stimulante.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Stages Intensifs</h3>
+                    <p>Immersion complète sur plusieurs jours pour approfondir votre pratique vocale. Approche intensive et transformative.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>contact@eleovocalstudio.com</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Téléphone</h3>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Adresse</h3>
+                    <p>123 Rue de la Musique<br>75000 Paris</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p>N'hésitez pas à me contacter pour discuter de vos projets et de vos aspirations vocales. Je serai ravie de vous accueillir au studio pour une première rencontre.</p>
+                <a href="mailto:contact@eleovocalstudio.com" style="display: inline-block; background-color: var(--primary-color); color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px;">
+                    <i class="fas fa-envelope"></i> Prendre rendez-vous
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2023 Eleo Vocal Studio - Tous droits réservés</p>
+            <p>Artiste lyrique et pédagogue - Enseignement du chant pop et lyrique</p>
+        </footer>
+    </div>
+
+    <script>
+        // Filtrage des vidéos par catégorie
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.video-category-btn');
+            const videoCards = document.querySelectorAll('.video-card');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Mettre à jour les boutons actifs
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filtrer les vidéos
+                    videoCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal vidéo
+            const modal = document.getElementById('video-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const modalVideo = document.getElementById('modal-video');
+            
+            // Ouvrir le modal (pour l'exemple, nous utilisons des vidéos YouTube factices)
+            videoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Dans un cas réel, vous utiliseriez l'URL de votre vidéo
+                    modalVideo.src = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Vidéo exemple
+                    modal.style.display = 'flex';
+                });
+            });
+            
+            // Fermer le modal
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+                modalVideo.src = '';
+            });
+            
+            // Fermer en cliquant à l'extérieur
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    modalVideo.src = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
