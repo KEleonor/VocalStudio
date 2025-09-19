@@ -599,7 +599,7 @@
                     <p><strong>IBAN:</strong> </p>
                     <p><strong>BIC:</strong></p>
                     <p><strong>Banque:</strong> Ma Banque</p>
-                    <p class="note"><em>Merci d'indiquer votre nom en référence de virement</em></p>
+                    <pclass="note"><em>Merci d'indiquer votre nom en référence de virement</em></p>
                 </div>
             </div>
         </div>
