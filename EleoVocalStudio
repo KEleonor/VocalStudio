@@ -596,8 +596,8 @@
                 <div class="bank-details" id="bankDetails">
                     <h4>Coordonnées Bancaires</h4>
                     <p><strong>Titulaire:</strong> Eleo Vocal Studio</p>
-                    <p><strong>IBAN:</strong> FR76 1234 5678 9012 3456 7890 123</p>
-                    <p><strong>BIC:</strong> ABCDEFGHXYZ</p>
+                    <p><strong>IBAN:</strong> </p>
+                    <p><strong>BIC:</strong></p>
                     <p><strong>Banque:</strong> Ma Banque</p>
                     <p class="note"><em>Merci d'indiquer votre nom en référence de virement</em></p>
                 </div>
