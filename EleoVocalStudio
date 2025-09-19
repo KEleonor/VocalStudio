@@ -746,19 +746,5 @@
             });
         }
         
-        // Script pour révéler les coordonnées bancaires
-        const revealBtn = document.getElementById('revealBankBtn');
-        const bankDetails = document.getElementById('bankDetails');
-        
-        revealBtn.addEventListener('click', function() {
-            if (bankDetails.style.display === 'none' || bankDetails.style.display === '') {
-                bankDetails.style.display = 'block';
-                this.innerHTML = '<i class="fas fa-unlock"></i> Masquer les coordonnées bancaires';
-            } else {
-                bankDetails.style.display = 'none';
-                this.innerHTML = '<i class="fas fa-lock"></i> Afficher les coordonnées bancaires';
-            }
-        });
-    </script>
-</body>
+ </body>
 </html>
