@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eleo Vocal Studio - Artiste Lyrique et Pédagogue</title>
+    <title>Eleo Vocal Studio - Artiste Lyrique et Pédagogue </title>
+    <meta name="description" content="Eleo Vocal Studio - Cours de chant classique et moderne par Votre Nom Complet. Ateliers de pratique vocale, concerts et pédagogie innovante.">
+    <meta name="keywords" content="Votre Nom Complet, chant classique, chant moderne, cours de chant, atelier vocal, professeur de chant, technique vocale">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -14,6 +16,8 @@
             --medium-gray: #e0e0e0;
             --dark-gray: #333333;
             --accent: #8e44ad;
+            --gold: #FFA500; /* Orange remplaçant le violet */
+            --light-gold: #FFD700; /* Jaune doré */
         }
         
         * {
@@ -23,7 +27,7 @@
         }
         
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Georgia;
             line-height: 1.8;
             color: var(--dark-gray);
             background-color: var(--white);
@@ -54,17 +58,26 @@
         }
         
         .logo {
-            font-family: 'Playfair Display', serif;
+            font-family: ' georgia;
             font-size: 3.5rem;
             margin-bottom: 15px;
             letter-spacing: 2px;
+            color: var(--black);
         }
         
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: ' georgia;
             font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: 400;
+            color: var(--black);
+        }
+        
+        .artist-name {
+            font-family: ' georgia;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
         }
         
         .tagline {
@@ -112,7 +125,7 @@
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: var(--black);
+            background-color: var(--gold);
             transition: width 0.3s ease;
         }
         
@@ -130,11 +143,12 @@
         }
         
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: ' georgia;
             font-size: 2.2rem;
             text-align: center;
             margin-bottom: 50px;
             position: relative;
+            color: var(--black);
         }
         
         .section-title:after {
@@ -142,7 +156,7 @@
             position: absolute;
             width: 60px;
             height: 2px;
-            background-color: var(--black);
+            background-color: var(--gold);
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
@@ -215,9 +229,287 @@
         }
         
         .activity-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'georgia;
             font-size: 1.4rem;
             margin-bottom: 15px;
+            color: var(--black);
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+            padding: 80px 0;
+        }
+        
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-header {
+            background: var(--gold);
+            color: var(--black);
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .pricing-title {
+            font-family: 'georgia;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--black);
+        }
+        
+        .pricing-duration {
+            font-size: 1rem;
+            opacity: 0.9;
+            color: var(--black);
+        }
+        
+        .pricing-features {
+            padding: 25px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        .pricing-button {
+            display: block;
+            background: var(--gold);
+            color: var(--black);
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .pricing-button:hover {
+            background: var(--light-gold);
+        }
+        
+        .pricing-notes {
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--dark-gray);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .security-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        .security-note i {
+            margin-right: 8px;
+            color: var(--gold);
+        }
+        
+        /* Video Sections */
+        .video-sections {
+            margin: 60px 0;
+        }
+        
+        .video-section {
+            margin-bottom: 60px;
+        }
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .video-wrapper {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background: #3a3a3a;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #4e4e4e;
+        }
+        
+        .video-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        
+        .video-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .video-content h3 {
+            font-family: ' georgia;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        
+        .video-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .video-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--black);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .video-button:hover {
+            background: var(--light-gold);
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--gold);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 3rem;
+            color: rgba(255, 165, 0, 0.1);
+        }
+        
+        /* Ideas Section */
+        .ideas-section {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .ideas-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .idea-title {
+            font-family: 'georgia;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--gold);
+        }
+        
+        .idea-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .idea-author {
+            font-style: italic;
+            opacity: 0.8;
+            color: var(--gold);
         }
         
         /* Gallery */
@@ -271,45 +563,6 @@
             color: var(--dark-gray);
         }
         
-        /* Bank details reveal system */
-        .bank-reveal {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .bank-details {
-            background-color: var(--light-gray);
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: none;
-            text-align: left;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .bank-details p {
-            margin-bottom: 10px;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .reveal-btn {
-            background-color: var(--dark-gray);
-            color: var(--white);
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Raleway', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .reveal-btn:hover {
-            background-color: var(--black);
-        }
-        
         /* Contact */
         .contact-grid {
             display: grid;
@@ -346,7 +599,7 @@
             padding: 12px 15px;
             border: 1px solid var(--medium-gray);
             border-radius: 5px;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'georgia;
             font-size: 1rem;
             transition: border-color 0.3s ease;
         }
@@ -354,7 +607,7 @@
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            border-color: var(--dark-gray);
+            border-color: var(--gold);
             outline: none;
         }
         
@@ -365,12 +618,12 @@
         
         .btn {
             display: inline-block;
-            background-color: var(--black);
-            color: var(--white);
+            background-color: var(--gold);
+            color: var(--black);
             padding: 12px 30px;
             border: none;
             border-radius: 5px;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'georgia;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
@@ -379,7 +632,7 @@
         }
         
         .btn:hover {
-            background-color: var(--dark-gray);
+            background-color: var(--light-gold);
         }
         
         /* Footer */
@@ -404,9 +657,10 @@
         }
         
         .footer-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'georgia;
             font-size: 1.4rem;
             margin-bottom: 20px;
+            color: var(--gold);
         }
         
         .social-links {
@@ -431,8 +685,8 @@
         
         .social-links a:hover {
             transform: translateY(-3px);
-            background-color: var(--accent);
-            color: var(--white);
+            background-color: var(--gold);
+            color: var(--black);
         }
         
         .copyright {
@@ -465,6 +719,14 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .video-container {
+                flex-direction: column;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -477,7 +739,7 @@
         <div class="container">
             <div class="logo">ELEO</div>
             <h1>Vocal Studio</h1>
-            <p class="tagline">Alliance de la musique classique et urbaine</p>
+                <p class="tagline">Alliance de la musique classique et urbaine</p>
         </div>
     </header>
     
@@ -486,8 +748,10 @@
             <ul>
                 <li><a href="#presentation">Présentation</a></li>
                 <li><a href="#activities">Activités</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#videos">Vidéos</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
                 <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#payment">Paiement</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -501,8 +765,8 @@
                     <img src="https://placehold.co/400x600/f5f5f5/333333?text=Eleo" alt="Eleo - Artiste Lyrique et Pédagogue" class="portrait">
                 </div>
                 <div class="presentation-text">
-                    <p>Je suis Eleo, artiste lyrique et pédagogue, passionnée par la physiologie et l'acoustique vocale, la transmission et l'expression vocale.
-                   Issue d'une famille de musiciens, mon parcours autodidacte et académique exigeant, d'interprète et de pédagogue me permet d'aborder l'enseignement avec une sensibilité particulière, alliant rigueur technique et expressivité. Au-delà de la technique vocale, je vous accompagne dans vos choix de répertoire, votre expression artistique et la préparation aux auditions.
+                    <p> Issue d'une famille d'artistes, musiciens et compositeurs, ma vie a été rythmée par la musique. 
+                    Mon parcours autodidacte et académique en alto et en chant exigeant, d'interprète et de pédagogue me permet d'aborder l'enseignement avec une sensibilité particulière, alliant rigueur technique et expressivité. Au-delà de la technique vocale, je vous accompagne dans vos choix de répertoire, votre expression artistique et la préparation aux auditions.
                     Mon approche artistique vise à révéler le potentiel de chacun dans le respect de sa singularité et de son authenticité.</p>
                 </div>
             </div>
@@ -518,7 +782,7 @@
                         <i class="fas fa-microphone-alt"></i>
                     </div>
                     <h3 class="activity-title">Espace Voix et Souffle</h3>
-                    <p>Accompagnement individuel, ateliers de pratique vocale, ateliers-concerts et stages pour explorer et développer votre voix dans une approche technique et expressive.</p>
+                    <p>Accompagnement individuel, ateliers de pratique vocale, ateliers-concerts et stages pour explorer et développer votre voix dans une approche technique et créative.</p>
                 </div>
                 
                 <div class="activity-card">
@@ -526,7 +790,7 @@
                         <i class="fas fa-music"></i>
                     </div>
                     <h3 class="activity-title">Création Artistique</h3>
-                    <p>Conception et direction de programmes concerts et pédagogiques, mêlant répertoire classique et créations contemporaines, avec une approche innovante.</p>
+                    <p>Conception et direction de programmes concerts pédagogiques, mêlant répertoire classique et créations contemporaines, avec une approche innovante.</p>
                 </div>
                 
                 <div class="activity-card">
@@ -548,64 +812,194 @@
         </div>
     </section>
     
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Tarifs et Prestations</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Cours Individuels</h3>
+                        <div class="pricing-price">30euros</div>
+                        <div class="pricing-duration">par séance d'1h</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Séance personnalisée d'1 heure</li>
+                            <li><i class="fas fa-check-circle"></i> Travail technique individualisé</li>
+                            <li><i class="fas fa-check-circle"></i> Choix de répertoire adapté</li>
+                            <li><i class="fas fa-check-circle"></i> Enregistrement audio des séances</li>
+                            <li><i class="fas fa-check-circle"></i> Support pédagogique inclus</li>
+                            <li><i class="fas fa-check-circle"></i> Forfait 10 séances : 280euros</li>
+                        </ul>
+                        <a href="#contact" class="pricing-button">Réserver un cours</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Ateliers Collectifs</h3>
+                        <div class="pricing-price">15euros</div>
+                        <div class="pricing-duration">par personne (2h30)</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Session de 2 h 30 en petit groupe</li>
+                            <li><i class="fas fa-check-circle"></i> Maximum 6 participants</li>
+                            <li><i class="fas fa-check-circle"></i> Travail technique et interprétation</li>
+                            <li><i class="fas fa-check-circle"></i> Échauffement vocal collectif</li>
+                            <li><i class="fas fa-check-circle"></i> Exercises de polyphonie</li>
+                            <li><i class="fas fa-check-circle"></i> Forfait 10 ateliers : 140€</li>
+                        </ul>
+                        <a href="#contact" class="pricing-button">S'inscrire à un atelier</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Stages Intensifs</h3>
+                        <div class="pricing-price">150euros</div>
+                        <div class="pricing-duration">week-end (6h)</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Stage de 6h heures sur week-end</li>
+                            <li><i class="fas fa-check-circle"></i> Travail technique approfondi</li>
+                            <li><i class="fas fa-check-circle"></i> Workshop en petit groupe</li>
+                            <li><i class="fas fa-check-circle"></i> Session d'enregistrement</li>
+                            <li><i class="fas fa-check-circle"></i> Restitution finale conviviale</li>
+                            <li><i class="fas fa-check-circle"></i> Supports pédagogiques complets</li>
+                        </ul>
+                        <a href="#contact" class="pricing-button">S'inscrire à un stage</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-notes">
+                <p>❖ Des tarifs préférentiels sont disponibles pour les étudiants et demandeurs d'emploi sur présentation d'un justificatif</p>
+                <p>❖ Premier cours d'essai offert (30 minutes) sans engagement</p>
+                <p>❖ Cours à domicile possible avec supplément (me consulter)</p>
+                
+                <div class="security-note">
+                    <i class="fas fa-lock"></i>
+                    <span>Paiements sécurisés par virement bancaire</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="videos" class="section">
+        <div class="container">
+            <h2 class="section-title">Vidéos</h2>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Concert Classique</p>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Concert Classique</h3>
+                        <p>Découvrez des extraits de concerts classiques.</p>
+                       
+                        <a href="#" class="video-button">Voir la vidéo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Atelier de Pratique Vocale Classique</p>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Atelier de Pratique Vocale Classique</h3>
+                        <p>Ces ateliers se concentrent sur les fondamentaux du chant classique :Souffle, posture, ancrage au sol, placement vocal et interprétation. Chaque session est conçue pour développer votre technique et votre confiance.</p>
+                        <p>Le travail en atelier permet une approche personnalisée tout en bénéficiant des dynamiques de groupe. Les participants explorent le répertoire classique et développent leur musicalité et leurs acquis.</p>
+                        <a href="#" class="video-button">Voir la vidéo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Atelier de Pratique Vocale Moderne</p>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h3>Atelier de Pratique Vocale Moderne</h3>
+                        <p>Ces ateliers explorent les techniques vocales modernes et contemporaines, incluant le jazz, la pop, et les musiques actuelles. L'accent est mis sur l'expression personnelle et la créativité.
+                        Le chant moderne offre une grande liberté d'expression tout en nécessitant une technique solide. Ces ateliers vous aident à trouver votre propre voix et à développer votre style personnel.</p>
+                        <a href="#" class="video-button">Voir la vidéo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="ideas-section">
+        <div class="container">
+            <div class="ideas-container">
+                <h3 class="idea-title">Idée du Jour</h3>
+                <p class="idea-content"></p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Témoignages</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">Les cours avec Eleo ont transformé ma façon d'aborder le chant. Sa pédagogie bienveillante et exigeante m'a permis de progresser rapidement tout en prenant confiance en moi.</p>
+                    <p class="testimonial-author">Marie L.</p>
+                    <p class="testimonial-role">Étudiante</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">J'ai participé à l'atelier de chant moderne et j'ai été impressionné par la qualité de l'enseignement. Eleo sait s'adapter à chaque élève et faire ressortir le meilleur de chacun.</p>
+                    <p class="testimonial-author">Thomas D.</p>
+                    <p class="testimonial-role">Chanteur amateur</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">La préparation aux auditions avec Eleo a été déterminante pour moi. Son expertise technique et son soutien m'ont permis d'aborder les auditions avec sérénité et confiance.</p>
+                    <p class="testimonial-author">Sophie M.</p>
+                    <p class="testimonial-role">Chanteuse professionnelle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="gallery" class="section">
         <div class="container">
             <h2 class="section-title">Galerie</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Quelques moments de performances et d'ateliers (photos et vidéos à venir)</p>
+            <p style="text-align: center; margin-bottom: 30px;">Quelques moments de performances et d'ateliers</p>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="https://placehold.co/400x250/f5f5f5/333333?text=Concert+Classique" alt="Performance en concert classique">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://placehold.co/400x250/f5f5f5/333333?text=Atelier de pratique vocale moderne" alt="Atelier de pratique vocale moderne">
+                    <img src="https://placehold.co/400x250/f5f5f5/333333?text=Atelier de pratique Vocale" alt="Atelier de pratique vocale">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://placehold.co/400x250/f5f5f5/333333?text=Atelier de pratique vocale classique" alt="Atelier de pratique vocale classique ">
-                </div>
+               
+                     </div>
             </div>
         </div>
     </section>
     
-    <section id="payment" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">Options de Paiement</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Pour votre convenance, je propose plusieurs moyens de paiement sécurisés. Les virements bancaires sont acceptés pour les cours et ateliers.</p>
-            
-            <div class="payment-options">
-                <div class="payment-card">
-                    <div class="payment-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Virement Bancaire</h3>
-                    <p>Paiement par virement direct vers mon compte professionnel. Les coordonnées bancaires sont disponibles sur demande.</p>
-                </div>
-                
-                <div class="payment-card">
-                    <div class="payment-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Paiement en Ligne</h3>
-                    <p>Solutions de paiement électronique sécurisées à venir prochainement pour plus de facilité.</p>
-                </div>
-            </div>
-            
-            <div class="bank-reveal">
-                <button class="reveal-btn" id="revealBankBtn">
-                    <i class="fas fa-lock"></i> Afficher les coordonnées bancaires
-                </button>
-                <div class="bank-details" id="bankDetails">
-                    <h4>Coordonnées Bancaires</h4>
-                    <p><strong>Titulaire:</strong> Eleo Vocal Studio</p>
-                    <p><strong>IBAN:</strong> </p>
-                    <p><strong>BIC:</strong></p>
-                    <p><strong>Banque:</strong> </p>
-                    <p class="note"><em>Merci d'indiquer votre nom en référence de virement</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section">
+    <section id="contact" class="section section-light">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-grid">
@@ -619,12 +1013,12 @@
                         <p>eleovocalstudio@outlook.fr</p>
                     </div>
                     
-                    <div class="contact-info">
+                     <div class="contact-info">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4>Adresse</h4>
-                        <p><br>06300 Nice</p>
+                        <p>>06300 Nice</p>
                     </div>
                     
                     <div class="contact-info">
@@ -634,18 +1028,23 @@
                         <h4>Horaires</h4>
                         <p>Sur rendez-vous<br>Du lundi au samedi</p>
                     </div>
+                    
+                    <div class="security-note" style="justify-content: flex-start; margin-top: 30px;">
+                        <i class="fas fa-lock"></i>
+                        <span>Transactions sécurisées pour tous les paiements</span>
+                    </div>
                 </div>
                 
                 <div>
                     <h3 style="text-align: center; margin-bottom: 30px;">Formulaire de contact</h3>
                     <form>
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
+                            <label for="name">Eleonor Rosanis</label>
                             <input type="text" id="name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">eleovocalstudio@outlook.fr</label>
                             <input type="email" id="email" required>
                         </div>
                         
@@ -655,6 +1054,7 @@
                                 <option value="">Sélectionnez une option</option>
                                 <option value="cours">Cours de chant</option>
                                 <option value="atelier">Atelier</option>
+                                <option value="stage">Stage</option>
                                 <option value="concert">Programme concert</option>
                                 <option value="autre">Autre demande</option>
                             </select>
@@ -677,7 +1077,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3 class="footer-title">Eleo Vocal Studio</h3>
-                    <p>Artiste lyrique et pédagogue spécialisée dans l'enseignement du chant lyrique et urbain, avec une approche technique rigoureuse et une pédagogie adaptée à chacun.</p>
+                    <p>Par <strong>Eleonor Rosanis</strong> - Artiste lyrique et pédagogue spécialisée dans l'enseignement du chant lyrique et urbain, avec une approche technique rigoureuse et une pédagogie adaptée à chacun.</p>
                 </div>
                 
                 <div class="footer-column">
@@ -685,15 +1085,17 @@
                     <ul style="list-style: none;">
                         <li><a href="#presentation" style="color: #fff; text-decoration: none;">Présentation</a></li>
                         <li><a href="#activities" style="color: #fff; text-decoration: none;">Activités</a></li>
-                        <li><a href="#gallery" style="color: #fff; text-decoration: none;">Galerie</a></li>
-                        <li><a href="#payment" style="color: #fff; text-decoration: none;">Paiement</a></li>
+                        <li><a href="#pricing" style="color: #fff; text-decoration: none;">Tarifs</a></li>
+                        <li><a href="#videos" style="color: #fff; text-decoration: none;">Vidéos</a></li>
+                        <li><a href="#testimonials" style="color: #fff; text-decoration: none;">Témoignages</a></li>
                         <li><a href="#contact" style="color: #fff; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3 class="footer-title">Moyens de Paiement</h3>
-                    <p>Virement bancaire (coordonnées disponibles sur le site)</p>
+                    <p><i class="fas fa-lock" style="color: var(--gold); margin-right: 8px;"></i> Virement bancaire sécurisé</p>
+                    <p>Coordonnées sur demande</p>
                     <p><em>Options supplémentaires à venir</em></p>
                 </div>
             </div>
@@ -707,7 +1109,7 @@
             
             <div class="copyright">
                 <p>&copy; 2023 Eleo Vocal Studio. Tous droits réservés.</p>
-                <p>Micro-entreprise - SIRET: 819 410 523</p>
+                <p>Eleonor Rosanis- SIRET: 819 410 523</p>
             </div>
         </div>
     </footer>
@@ -738,19 +1140,25 @@
             });
         }
         
-        // Script pour révéler les coordonnées bancaires
-        const revealBtn = document.getElementById('revealBankBtn');
-        const bankDetails = document.getElementById('bankDetails');
+        // Script pour changer l'idée du jour
+        const ideas = [
+            {content: "C'est magique de pouvoir naviguer sur le fil d'air avec sa voix!"
+               Eleo"},
+               {content: "La technique vocale n'est pas une fin en soi, mais un moyen d'exprimer pleinement sa musicalité intérieure."
+            
+        ];
         
-        revealBtn.addEventListener('click', function() {
-            if (bankDetails.style.display === 'none' || bankDetails.style.display === '') {
-                bankDetails.style.display = 'block';
-                this.innerHTML = '<i class="fas fa-unlock"></i> Masquer les coordonnées bancaires';
-            } else {
-                bankDetails.style.display = 'none';
-                this.innerHTML = '<i class="fas fa-lock"></i> Afficher les coordonnées bancaires';
-            }
-        });
+        function changeDailyIdea() {
+            const ideaElement = document.querySelector('.idea-content');
+            const authorElement = document.querySelector('.idea-author');
+            const randomIndex = Math.floor(Math.random() * ideas.length);
+            
+            ideaElement.textContent = `"${ideas[randomIndex].content}"`;
+            authorElement.textContent = `- ${ideas[randomIndex].author}, artiste lyrique et pédagogue`;
+        }
+        
+        // Changer l'idée du jour au chargement de la page
+        document.addEventListener('DOMContentLoaded', changeDailyIdea);
     </script>
 </body>
 </html>
