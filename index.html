@@ -513,31 +513,32 @@
             color: var(--gold);
         }
         
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+                .galerie-concerts {
+            /* Centre la galerie sur la page */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            height: 250px;
+        .galerie-concerts a {
+            /* Ajoute un espace entre chaque image */
+            margin-bottom: 30px;
+            /* Style optionnel pour l'effet au survol */
+            transition: transform 0.3s ease;
         }
-        
-        .gallery-item img {
+        .galerie-concerts a:hover {
+            /* Légère zoom au survol (optionnel) */
+            transform: scale(1.02);
+        }
+        .galerie-concerts img {
+            /* Assure que l'image ne dépasse pas une certaine largeur */
+            max-width: 600px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            height: auto;
+            /* Style esthétique pour l'image */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
+
         
         /* Payment */
         .payment-options {
@@ -1022,6 +1023,7 @@
             <p style="text-align: center; margin-bottom: 30px;">Quelques moments de performances et d'ateliers</p>
             <div class="gallery">
                 <div class="gallery-item">
+                    <a href = LIEN-VERSE_ https://photos.app.goo.gl/UPK1eUaS9kArvEzs8">
                       <img src="Concert Classique-Résonances 1" alt=
                         https://photos.app.goo.gl/UPK1eUaS9kArvEzs8 ">
                          </div>
